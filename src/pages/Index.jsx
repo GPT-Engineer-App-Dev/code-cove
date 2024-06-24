@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Container, Heading, Text, Button, VStack, HStack, Image, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
+import CodeEditor from '../components/CodeEditor';
 import { FaCode, FaLaptopCode, FaUserGraduate } from "react-icons/fa";
 
 const Feature = ({ title, icon, children }) => {
@@ -82,6 +83,19 @@ const Index = () => {
                 image="https://via.placeholder.com/300x200?text=Web+Development+Course"
               />
             </SimpleGrid>
+          </VStack>
+        </Container>
+      </Box>
+
+      {/* Code Editor Section */}
+      <Box py={16}>
+        <Container maxW="container.xl">
+          <VStack spacing={8}>
+            <Heading as="h2" size="xl">Try Our Code Editor</Heading>
+            <Text fontSize="lg" textAlign="center">
+              Practice coding directly in your browser with our interactive code editor.
+            </Text>
+            <CodeEditor />
           </VStack>
         </Container>
       </Box>
