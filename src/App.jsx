@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation.jsx";
 import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
 import Index from "./pages/Index.jsx";
 
@@ -28,6 +29,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <CSSReset />
       <Router>
+        <Navigation />
         <Routes>
           <Route exact path="/" element={<Index />} />
         </Routes>
